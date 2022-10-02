@@ -1,1 +1,7 @@
 Building the community part of our application for Roete. This will be our submission for Greenhouse Hack 2, the Customer Loyalty App bounty (https://gitcoin.co/issue/29365).
+
+Challenge Description
+This challenge is focused on building a customer loyalty application. The decentralized app should reward existing customers with an application token when a specific action is taken or some time in membership has elapsed. The exact conditions are not specified but could be for recruiting new members to an organization, a website, or discord channel. Members may be rewarded for performing specific operations like answering questions for new users or being in an organization for a certain length of time. The application should support adding or modifying reward conditions and amounts. These conditions should be implemented in smart contracts and triggered by using one of the Algorand SDKs. The loyalty token should be redeemable for additional member benefits like additional privileges or exchangeable for merchandise at a given level.
+
+Submission Requirements
+A valid submission will include the source code via a Github repository linked to your Gitcoin submission, a recorded demo and an article that explains how the application works. It is expected that most bounty challenges will be won by fully functioning submissions, however, in certain cases, where there is a higher degree of difficulty, projects and payouts will be assessed on progress made. The project submission deadline is 17:00 EST on Wednesday the 2nd of November.
