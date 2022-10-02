@@ -1,3 +1,8 @@
+# reward members with a application token (this is a ASA?)
+# reward members for performing specific actions - ie sending materials to crisis zone or providing a discount
+# loyalty token should be redeemable for additional member benefits - could give them a promotion as free marketing or a direct payout in some form such as algos
+    # could alternatively pay out a percentage for holding these tokens
+
 from pyteal import *
 
 class Community:
@@ -20,3 +25,7 @@ class Community:
             # approves by leaving a one on the execution stack
             Approve()
         ])
+
+
+
+
