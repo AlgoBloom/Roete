@@ -35,8 +35,10 @@ class Item:
             # price is the fourth app arg
             App.globalPut(self.Vars.price, Txn.application_args[4]),
             # intiializes the sold var to zero sold
-            App.globalPut(self.Vars.price, Int(0)),
+            App.globalPut(self.Vars.sold, Int(0)),
             # approves the sequence
             Return(Int(1)),
         )
-    
+    # method for sending the cart to crowdfund
+    def fund(self):
+        
