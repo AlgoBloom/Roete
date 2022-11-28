@@ -32,5 +32,11 @@ class Item:
             App.globalPut(self.Vars.image, Txn.application_args[2]),
             # description is third app arg
             App.globalPut(self.Vars.description, Txn.application_args[3]),
+            # price is the fourth app arg
+            App.globalPut(self.Vars.price, Txn.application_args[4]),
+            # intiializes the sold var to zero sold
+            App.globalPut(self.Vars.price, Int(0)),
+            # approves the sequence
+            Return(Int(1)),
         )
     
