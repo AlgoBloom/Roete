@@ -4,6 +4,7 @@
 from pyteal import *
 
 class Item:
+    # class holds the variables
     class Vars:
         supplier = Bytes("Supplier")
         name = Bytes("Name")
@@ -11,6 +12,8 @@ class Item:
         description = Bytes("Description")
         price = Bytes("Price")
         sold = Bytes("Sold")
-
+    # class holds the methods
     class Methods:
         Fund = Bytes("Fund")
+
+    
