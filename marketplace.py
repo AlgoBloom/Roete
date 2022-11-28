@@ -18,8 +18,11 @@ class Item:
     # method creates a product
     def app_creation(self):
         return Seq(
+            # requires 5 app args for call
             Assert(Txn.application_args.length() == Int(5)),
+            # requires note
             Assert(Txn.note() == Bytes("marketplace:uv1")),
-            
+            # requires price is greater than zero
+            Assert(Btoi(Txn.application_args[4]) > Int(0)),
         )
     
