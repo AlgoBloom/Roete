@@ -11,3 +11,6 @@ class Item:
         description = Bytes("Description")
         price = Bytes("Price")
         sold = Bytes("Sold")
+
+    class Methods:
+        Fund = Bytes("Fund")
