@@ -28,6 +28,7 @@ class Item:
             App.globalPut(self.Vars.supplier, Txn.application_args[0]),
             # name is first app arg
             App.globalPut(self.Vars.name, Txn.application_args[1]),
-
+            # image is second app arg
+            App.globalPut(self.Vars.image, Txn.application_args[2]),
         )
     
