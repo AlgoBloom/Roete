@@ -24,5 +24,8 @@ class Item:
             Assert(Txn.note() == Bytes("marketplace:uv1")),
             # requires price is greater than zero
             Assert(Btoi(Txn.application_args[4]) > Int(0)),
+            # supplier is first app arg
+            App.globalPut(self.Vars.supplier, Txn.application_args[0]),
+            
         )
     
