@@ -15,5 +15,9 @@ class Item:
     # class holds the methods
     class Methods:
         Fund = Bytes("Fund")
-
+    # method creates a product
+    def app_creation(self):
+        return Seq(
+            Assert(Txn.application_args.length() == Int(5)),
+        )
     
