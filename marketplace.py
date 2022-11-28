@@ -19,5 +19,7 @@ class Item:
     def app_creation(self):
         return Seq(
             Assert(Txn.application_args.length() == Int(5)),
+            Assert(Txn.note() == Bytes("marketplace:uv1")),
+            
         )
     
