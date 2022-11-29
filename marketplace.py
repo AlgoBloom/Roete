@@ -44,6 +44,8 @@ class Item:
         return Seq([
             # requires five app args
             Assert(Txn.application_args.length() == Int(5)),
+            # note for the marketplace item
+            Assert(Txn.note() == Bytes("marketplace:uv1")),
         ])
     # method for sending the cart to crowdfund
     def fund(self):
