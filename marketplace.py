@@ -39,14 +39,7 @@ class Item:
             # approves the sequence
             Return(Int(1)),
         )
-    # method for adding a item to marketplace
-    def app_create(self):
-        return Seq([
-            # requires five app args
-            Assert(Txn.application_args.length() == Int(5)),
-            # note for the marketplace item
-            Assert(Txn.note() == Bytes("marketplace:uv1")),
-        ])
     # method for sending the cart to crowdfund
     def fund(self):
-        
+        # assign the first app arg to count
+        amount = Txn.application_args[1]
