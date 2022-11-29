@@ -43,3 +43,6 @@ class Item:
     def fund(self):
         # assign the first app arg to count
         amount = Txn.application_args[1]
+    # method for deleting a item
+    def app_delete(self):
+        
