@@ -42,7 +42,8 @@ class Item:
     # method for adding a item to marketplace
     def app_create(self):
         return Seq([
-            
+            # requires five app args
+            Assert(Txn.application_args.length() == Int(5)),
         ])
     # method for sending the cart to crowdfund
     def fund(self):
