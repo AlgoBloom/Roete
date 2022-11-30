@@ -49,3 +49,8 @@ class Item:
         return Return(Txn.sender() == Global.creator_address())
     # application start method
     def app_start(self):
+        return Cond(
+            # calls app create method if app doesn't exist
+            [Txn.application_id() == Int(0), self.app_creation()],
+
+        )
