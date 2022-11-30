@@ -52,5 +52,6 @@ class Item:
         return Cond(
             # calls app create method if app doesn't exist
             [Txn.application_id() == Int(0), self.app_creation()],
-
+            # if the txn type is delete then delete app
+            [Txn.on_completion() == OnComplete.DeleteApplication, self.app_delete()],
         )
