@@ -57,3 +57,7 @@ class Item:
             # if the zeroth app arg is fund, call the fund method
             [Txn.application_args[0] == self.Methods.fund, self.fund()],
         )
+    # approval program
+    def approval_prog(self):
+        # returns the app start method 
+        return self.app_start()
