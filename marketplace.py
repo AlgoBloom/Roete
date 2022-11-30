@@ -47,3 +47,5 @@ class Item:
     def app_delete(self):
         # only allows deletion of item if caller is app creator
         return Return(Txn.sender() == Global.creator_address())
+    # application start method
+    def app_start(self):
