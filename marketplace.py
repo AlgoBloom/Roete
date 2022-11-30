@@ -14,7 +14,7 @@ class Item:
         sold = Bytes("Sold")
     # class holds the methods
     class Methods:
-        Fund = Bytes("Fund")
+        fund = Bytes("Fund")
     # method creates a product
     def app_creation(self):
         return Seq(
@@ -54,4 +54,6 @@ class Item:
             [Txn.application_id() == Int(0), self.app_creation()],
             # if the txn type is delete then delete app
             [Txn.on_completion() == OnComplete.DeleteApplication, self.app_delete()],
+            # if the zeroth app arg is fund, call the fund method
+            [Txn.application_args[0] == self.Methods.fund, self.fund()],
         )
