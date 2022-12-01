@@ -63,3 +63,5 @@ class Item:
         return self.app_start()
     # clear program
     def clear_prog(self):
+        # return as approved
+        return Return(Int(1))
