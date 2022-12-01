@@ -61,3 +61,5 @@ class Item:
     def approval_prog(self):
         # returns the app start method 
         return self.app_start()
+    # clear program
+    def clear_prog(self):
